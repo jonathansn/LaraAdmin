@@ -1,0 +1,984 @@
+/***** FONTS *****/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800);
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/***** PANELS *****/
+.panel {
+    border: 0;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    position: relative;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.panel-heading {
+    margin-bottom: 0;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.panel-heading.min {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.panel-heading p {
+    margin: 7px 0 0;
+}
+.panel-heading + .panel-body {
+    padding-top: 0;
+}
+.panel-title {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #313745;
+    letter-spacing: .2px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.panel-body {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.panel-body p + p {
+    margin: 15px 0 0;
+}
+.panel-body .list-inline > li:first-child {
+    padding-left: 0;
+}
+.panel-body .list-inline > li:last-child {
+    padding-right: 0;
+}
+.panel-body.inverse {
+    background-color: #3b4354;
+    color: rgba(255, 255, 255, 0.8);
+}
+.panel-default > .panel-heading > p {
+    color: #696c74;
+}
+.panel-footer {
+    background-color: #f0f1f4;
+    border-color: transparent;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.panel-default .panel-options,
+.panel-primary .panel-options,
+.panel-success .panel-options,
+.panel-warning .panel-options,
+.panel-danger .panel-options,
+.panel-info .panel-options,
+.panel-inverse .panel-options {
+    top: 11px;
+}
+.panel-default .panel-heading,
+.panel-primary .panel-heading,
+.panel-success .panel-heading,
+.panel-warning .panel-heading,
+.panel-danger .panel-heading,
+.panel-info .panel-heading,
+.panel-inverse .panel-heading {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 0;
+}
+.panel-default .panel-heading .panel-title,
+.panel-primary .panel-heading .panel-title,
+.panel-success .panel-heading .panel-title,
+.panel-warning .panel-heading .panel-title,
+.panel-danger .panel-heading .panel-title,
+.panel-info .panel-heading .panel-title,
+.panel-inverse .panel-heading .panel-title {
+    color: #fff;
+}
+.panel-default .panel-heading p,
+.panel-primary .panel-heading p,
+.panel-success .panel-heading p,
+.panel-warning .panel-heading p,
+.panel-danger .panel-heading p,
+.panel-info .panel-heading p,
+.panel-inverse .panel-heading p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.panel-default .panel-body,
+.panel-primary .panel-body,
+.panel-success .panel-body,
+.panel-warning .panel-body,
+.panel-danger .panel-body,
+.panel-info .panel-body,
+.panel-inverse .panel-body {
+    padding-top: 20px;
+}
+.panel-group .panel {
+    border-radius: 0;
+}
+.panel-group .panel > .panel-heading {
+    padding: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.panel-group .panel > .panel-heading .panel-title {
+    font-size: 12px;
+}
+@media (max-width: 480px) {
+    .panel-group .panel > .panel-heading .panel-title {
+        line-height: 18px;
+    }
+}
+.panel-group .panel > .panel-heading .panel-title > a {
+    display: block;
+    position: relative;
+    padding: 18px 20px 15px;
+    color: #505b72;
+    color: #259dab;
+    background-color: #fff;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -o-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+.panel-group .panel > .panel-heading .panel-title > a:hover,
+.panel-group .panel > .panel-heading .panel-title > a:focus {
+    color: #259dab;
+}
+.panel-group .panel > .panel-heading .panel-title > a:after {
+    content: '\f078';
+    font-family: 'FontAwesome';
+    font-size: 11px;
+    font-weight: normal;
+    color: #9fa8bc;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+}
+.panel-group .panel > .panel-heading .panel-title > a.collapsed {
+    padding: 15px 20px;
+    color: #505b72;
+}
+.panel-group .panel > .panel-heading .panel-title > a.collapsed:after {
+    content: '\f054';
+    color: #fff;
+}
+.panel-group .panel > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel > .panel-heading .panel-title > a.collapsed:focus {
+    color: #262b36;
+}
+.panel-group .panel > .panel-heading + .panel-collapse > .panel-body {
+    border-top: 0;
+}
+.panel-group .panel + .panel {
+    margin-top: 0;
+    border-top: 1px solid #dbdfe6;
+}
+.panel-group .panel .panel-collapse.in > .panel-body,
+.panel-group .panel .panel-collapse.collapsing > .panel-body {
+    padding-top: 0;
+}
+.panel-group .panel:first-child,
+.panel-group .panel:first-child > .panel-heading .panel-title > a {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.panel-group .panel:last-child,
+.panel-group .panel:last-child > .panel-heading .panel-title > a.collapsed {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a,
+.panel-group .panel-primary > .panel-heading .panel-title > a,
+.panel-group .panel-success > .panel-heading .panel-title > a,
+.panel-group .panel-warning > .panel-heading .panel-title > a,
+.panel-group .panel-danger > .panel-heading .panel-title > a,
+.panel-group .panel-info > .panel-heading .panel-title > a,
+.panel-group .panel-inverse > .panel-heading .panel-title > a {
+    margin-top: -1px;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a:after,
+.panel-group .panel-primary > .panel-heading .panel-title > a:after,
+.panel-group .panel-success > .panel-heading .panel-title > a:after,
+.panel-group .panel-warning > .panel-heading .panel-title > a:after,
+.panel-group .panel-danger > .panel-heading .panel-title > a:after,
+.panel-group .panel-info > .panel-heading .panel-title > a:after,
+.panel-group .panel-inverse > .panel-heading .panel-title > a:after {
+    display: block;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:focus {
+    color: #fff;
+}
+.panel-group .panel-default:first-child > .panel-heading,
+.panel-group .panel-primary:first-child > .panel-heading,
+.panel-group .panel-success:first-child > .panel-heading,
+.panel-group .panel-warning:first-child > .panel-heading,
+.panel-group .panel-danger:first-child > .panel-heading,
+.panel-group .panel-info:first-child > .panel-heading,
+.panel-group .panel-inverse:first-child > .panel-heading {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.panel-group .panel-default:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-primary:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-success:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-warning:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-danger:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-info:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-inverse:first-child > .panel-heading .panel-title > a {
+    margin-top: 0;
+}
+.panel-group .panel-default:last-child > .panel-heading,
+.panel-group .panel-primary:last-child > .panel-heading,
+.panel-group .panel-success:last-child > .panel-heading,
+.panel-group .panel-warning:last-child > .panel-heading,
+.panel-group .panel-danger:last-child > .panel-heading,
+.panel-group .panel-info:last-child > .panel-heading,
+.panel-group .panel-inverse:last-child > .panel-heading,
+.panel-group .panel-default:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-primary:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-success:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-warning:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-danger:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-info:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-inverse:last-child > .panel-heading .panel-title > a.collapsed {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel-group .panel-default .panel-collapse.in > .panel-body,
+.panel-group .panel-primary .panel-collapse.in > .panel-body,
+.panel-group .panel-success .panel-collapse.in > .panel-body,
+.panel-group .panel-warning .panel-collapse.in > .panel-body,
+.panel-group .panel-danger .panel-collapse.in > .panel-body,
+.panel-group .panel-info .panel-collapse.in > .panel-body,
+.panel-group .panel-inverse .panel-collapse.in > .panel-body,
+.panel-group .panel-default .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-primary .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-success .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-warning .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-danger .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-info .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-inverse .panel-collapse.collapsing > .panel-body {
+    padding-top: 0;
+    margin-bottom: -1px;
+}
+.panel-group .panel-default > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a,
+.panel-group .panel-default > .panel-heading .panel-title > a:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a:focus {
+    color: #9fa8bc;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed {
+    background-color: #9fa8bc;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #909bb1;
+}
+.panel-group .panel-default + .panel {
+    border-color: #b4bbca;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a,
+.panel-group .panel-default > .panel-heading .panel-title > a:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a:focus {
+    color: #3b4354;
+}
+.panel-group .panel-primary > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-primary > .panel-heading .panel-title > a,
+.panel-group .panel-primary > .panel-heading .panel-title > a:hover,
+.panel-group .panel-primary > .panel-heading .panel-title > a:focus {
+    color: #2574ab;
+}
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed {
+    background-color: #2574ab;
+}
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #206696;
+}
+.panel-group .panel-primary + .panel {
+    border-color: #2b88c8;
+}
+.panel-group .panel-success > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-success > .panel-heading .panel-title > a,
+.panel-group .panel-success > .panel-heading .panel-title > a:hover,
+.panel-group .panel-success > .panel-heading .panel-title > a:focus {
+    color: #259dab;
+}
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed {
+    background-color: #259dab;
+}
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #208a96;
+}
+.panel-group .panel-success + .panel {
+    border-color: #2bb8c8;
+}
+.panel-group .panel-warning > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-warning > .panel-heading .panel-title > a,
+.panel-group .panel-warning > .panel-heading .panel-title > a:hover,
+.panel-group .panel-warning > .panel-heading .panel-title > a:focus {
+    color: #e6ad5c;
+}
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed {
+    background-color: #e6ad5c;
+}
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #e3a246;
+}
+.panel-group .panel-warning + .panel {
+    border-color: #ebbd7b;
+}
+.panel-group .panel-danger > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-danger > .panel-heading .panel-title > a,
+.panel-group .panel-danger > .panel-heading .panel-title > a:hover,
+.panel-group .panel-danger > .panel-heading .panel-title > a:focus {
+    color: #d9534f;
+}
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed {
+    background-color: #d9534f;
+}
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #d43f3a;
+}
+.panel-group .panel-danger + .panel {
+    border-color: #df706c;
+}
+.panel-group .panel-info > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-info > .panel-heading .panel-title > a,
+.panel-group .panel-info > .panel-heading .panel-title > a:hover,
+.panel-group .panel-info > .panel-heading .panel-title > a:focus {
+    color: #5bc0de;
+}
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed {
+    background-color: #5bc0de;
+}
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #46b8da;
+}
+.panel-group .panel-info + .panel {
+    border-color: #79cbe4;
+}
+.panel-group .panel-inverse > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-inverse > .panel-heading .panel-title > a,
+.panel-group .panel-inverse > .panel-heading .panel-title > a:hover,
+.panel-group .panel-inverse > .panel-heading .panel-title > a:focus {
+    color: #505b72;
+}
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed {
+    background-color: #505b72;
+}
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #464f63;
+}
+.panel-group .panel-inverse + .panel {
+    border-color: #5f6b87;
+}
+/***************** Checkbox *****************/
+.ckbox,
+.rdiobox {
+    font-weight: normal;
+    position: relative;
+    display: block;
+    line-height: 18px;
+}
+.ckbox span:before,
+.ckbox span:after {
+    line-height: 18px;
+    position: absolute;
+}
+.ckbox span:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 1px solid #dbdfe6;
+    border-radius: 1px;
+    top: 2px;
+    left: 0;
+}
+.ckbox span:after {
+    left: 2.5px;
+    top: 0;
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    font-size: 9px;
+    color: #696c74;
+    display: none;
+}
+.ckbox input[type='checkbox'] {
+    opacity: 0;
+    margin: 0 5px 0 0;
+}
+.ckbox input[type='checkbox']:checked + span:before {
+    border-color: #ccd1db;
+}
+.ckbox input[type='checkbox']:checked + span:after {
+    display: block;
+}
+.ckbox input[type='checkbox'][disabled] + span,
+.ckbox input[type='checkbox'][disabled] + span:before,
+.ckbox input[type='checkbox'][disabled] + span:after {
+    opacity: .75;
+}
+.ckbox-inline,
+.rdiobox-inline {
+    display: inline-block;
+}
+/* Checkbox color variant */
+.ckbox-primary input[type='checkbox']:checked + span:before {
+    background-color: #2574ab;
+    border-color: #2574ab;
+}
+.ckbox-primary input[type='checkbox']:checked + span:after {
+    color: #ffffff;
+}
+.ckbox-success input[type='checkbox']:checked + span:before {
+    background-color: #259dab;
+    border-color: #259dab;
+}
+.ckbox-success input[type='checkbox']:checked + span:after {
+    color: #ffffff;
+}
+.ckbox-warning input[type='checkbox']:checked + span:before {
+    background-color: #e6ad5c;
+    border-color: #e6ad5c;
+}
+.ckbox-warning input[type='checkbox']:checked + span:after {
+    color: #ffffff;
+}
+.ckbox-danger input[type='checkbox']:checked + span:before {
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+.ckbox-danger input[type='checkbox']:checked + span:after {
+    color: #ffffff;
+}
+.ckbox-info input[type='checkbox']:checked + span:before {
+    background-color: #5bc0de;
+    border-color: #5bc0de;
+}
+.ckbox-info input[type='checkbox']:checked + span:after {
+    color: #ffffff;
+}
+/* Radio Box */
+.rdiobox span:before,
+.rdiobox span:after {
+    line-height: 18px;
+    position: absolute;
+}
+.rdiobox span:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border: 1px solid #696c74;
+    border-radius: 50px;
+    top: 2px;
+    left: 0;
+}
+.rdiobox span:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #696c74;
+    border-radius: 50px;
+    top: 5px;
+    left: 3px;
+    display: none;
+}
+.rdiobox input[type='radio'] {
+    opacity: 0;
+    margin: 0 5px 0 0;
+}
+.rdiobox input[type='radio']:checked + span:before {
+    border-color: #666;
+}
+.rdiobox input[type='radio']:checked + span:after {
+    display: block;
+}
+.rdiobox input[type='radio'][disabled] + span,
+.rdiobox input[type='radio'][disabled] + span:before,
+.rdiobox input[type='radio'][disabled] + span:after {
+    opacity: .75;
+}
+/* Radio box color variant */
+.rdiobox-primary input[type='radio']:checked + span:before {
+    border-color: #2574ab;
+}
+.rdiobox-primary input[type='radio']:checked + span:after {
+    background-color: #2574ab;
+}
+.rdiobox-success input[type='radio']:checked + span:before {
+    border-color: #259dab;
+}
+.rdiobox-success input[type='radio']:checked + span:after {
+    background-color: #259dab;
+}
+.rdiobox-warning input[type='radio']:checked + span:before {
+    border-color: #e6ad5c;
+}
+.rdiobox-warning input[type='radio']:checked + span:after {
+    background-color: #e6ad5c;
+}
+.rdiobox-danger input[type='radio']:checked + span:before {
+    border-color: #d9534f;
+}
+.rdiobox-danger input[type='radio']:checked + span:after {
+    background-color: #d9534f;
+}
+.rdiobox-info input[type='radio']:checked + span:before {
+    border-color: #5bc0de;
+}
+.rdiobox-info input[type='radio']:checked + span:after {
+    background-color: #5bc0de;
+}
+.panel {
+    border: 0;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    position: relative;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.panel-heading {
+    margin-bottom: 0;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.panel-heading.min {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.panel-heading p {
+    margin: 7px 0 0;
+}
+.panel-heading + .panel-body {
+    padding-top: 0;
+}
+.panel-title {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #313745;
+    letter-spacing: .2px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.panel-body {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.panel-body p + p {
+    margin: 15px 0 0;
+}
+.panel-body .list-inline > li:first-child {
+    padding-left: 0;
+}
+.panel-body .list-inline > li:last-child {
+    padding-right: 0;
+}
+.panel-body.inverse {
+    background-color: #3b4354;
+    color: rgba(255, 255, 255, 0.8);
+}
+.panel-default > .panel-heading > p {
+    color: #696c74;
+}
+.panel-footer {
+    background-color: #f0f1f4;
+    border-color: transparent;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.panel-default .panel-options,
+.panel-primary .panel-options,
+.panel-success .panel-options,
+.panel-warning .panel-options,
+.panel-danger .panel-options,
+.panel-info .panel-options,
+.panel-inverse .panel-options {
+    top: 11px;
+}
+.panel-default .panel-heading,
+.panel-primary .panel-heading,
+.panel-success .panel-heading,
+.panel-warning .panel-heading,
+.panel-danger .panel-heading,
+.panel-info .panel-heading,
+.panel-inverse .panel-heading {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 0;
+}
+.panel-default .panel-heading .panel-title,
+.panel-primary .panel-heading .panel-title,
+.panel-success .panel-heading .panel-title,
+.panel-warning .panel-heading .panel-title,
+.panel-danger .panel-heading .panel-title,
+.panel-info .panel-heading .panel-title,
+.panel-inverse .panel-heading .panel-title {
+    color: #fff;
+}
+.panel-default .panel-heading p,
+.panel-primary .panel-heading p,
+.panel-success .panel-heading p,
+.panel-warning .panel-heading p,
+.panel-danger .panel-heading p,
+.panel-info .panel-heading p,
+.panel-inverse .panel-heading p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.panel-default .panel-body,
+.panel-primary .panel-body,
+.panel-success .panel-body,
+.panel-warning .panel-body,
+.panel-danger .panel-body,
+.panel-info .panel-body,
+.panel-inverse .panel-body {
+    padding-top: 20px;
+}
+.panel-group .panel {
+    border-radius: 0;
+}
+.panel-group .panel > .panel-heading {
+    padding: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+.panel-group .panel > .panel-heading .panel-title {
+    font-size: 12px;
+}
+@media (max-width: 480px) {
+    .panel-group .panel > .panel-heading .panel-title {
+        line-height: 18px;
+    }
+}
+.panel-group .panel > .panel-heading .panel-title > a {
+    display: block;
+    position: relative;
+    padding: 18px 20px 15px;
+    color: #505b72;
+    color: #259dab;
+    background-color: #fff;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -o-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+.panel-group .panel > .panel-heading .panel-title > a:hover,
+.panel-group .panel > .panel-heading .panel-title > a:focus {
+    color: #259dab;
+}
+.panel-group .panel > .panel-heading .panel-title > a:after {
+    content: '\f078';
+    font-family: 'FontAwesome';
+    font-size: 11px;
+    font-weight: normal;
+    color: #9fa8bc;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+}
+.panel-group .panel > .panel-heading .panel-title > a.collapsed {
+    padding: 15px 20px;
+    color: #505b72;
+}
+.panel-group .panel > .panel-heading .panel-title > a.collapsed:after {
+    content: '\f054';
+    color: #fff;
+}
+.panel-group .panel > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel > .panel-heading .panel-title > a.collapsed:focus {
+    color: #262b36;
+}
+.panel-group .panel > .panel-heading + .panel-collapse > .panel-body {
+    border-top: 0;
+}
+.panel-group .panel + .panel {
+    margin-top: 0;
+    border-top: 1px solid #dbdfe6;
+}
+.panel-group .panel .panel-collapse.in > .panel-body,
+.panel-group .panel .panel-collapse.collapsing > .panel-body {
+    padding-top: 0;
+}
+.panel-group .panel:first-child,
+.panel-group .panel:first-child > .panel-heading .panel-title > a {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.panel-group .panel:last-child,
+.panel-group .panel:last-child > .panel-heading .panel-title > a.collapsed {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a,
+.panel-group .panel-primary > .panel-heading .panel-title > a,
+.panel-group .panel-success > .panel-heading .panel-title > a,
+.panel-group .panel-warning > .panel-heading .panel-title > a,
+.panel-group .panel-danger > .panel-heading .panel-title > a,
+.panel-group .panel-info > .panel-heading .panel-title > a,
+.panel-group .panel-inverse > .panel-heading .panel-title > a {
+    margin-top: -1px;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a:after,
+.panel-group .panel-primary > .panel-heading .panel-title > a:after,
+.panel-group .panel-success > .panel-heading .panel-title > a:after,
+.panel-group .panel-warning > .panel-heading .panel-title > a:after,
+.panel-group .panel-danger > .panel-heading .panel-title > a:after,
+.panel-group .panel-info > .panel-heading .panel-title > a:after,
+.panel-group .panel-inverse > .panel-heading .panel-title > a:after {
+    display: block;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:focus,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:focus {
+    color: #fff;
+}
+.panel-group .panel-default:first-child > .panel-heading,
+.panel-group .panel-primary:first-child > .panel-heading,
+.panel-group .panel-success:first-child > .panel-heading,
+.panel-group .panel-warning:first-child > .panel-heading,
+.panel-group .panel-danger:first-child > .panel-heading,
+.panel-group .panel-info:first-child > .panel-heading,
+.panel-group .panel-inverse:first-child > .panel-heading {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.panel-group .panel-default:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-primary:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-success:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-warning:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-danger:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-info:first-child > .panel-heading .panel-title > a,
+.panel-group .panel-inverse:first-child > .panel-heading .panel-title > a {
+    margin-top: 0;
+}
+.panel-group .panel-default:last-child > .panel-heading,
+.panel-group .panel-primary:last-child > .panel-heading,
+.panel-group .panel-success:last-child > .panel-heading,
+.panel-group .panel-warning:last-child > .panel-heading,
+.panel-group .panel-danger:last-child > .panel-heading,
+.panel-group .panel-info:last-child > .panel-heading,
+.panel-group .panel-inverse:last-child > .panel-heading,
+.panel-group .panel-default:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-primary:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-success:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-warning:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-danger:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-info:last-child > .panel-heading .panel-title > a.collapsed,
+.panel-group .panel-inverse:last-child > .panel-heading .panel-title > a.collapsed {
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.panel-group .panel-default .panel-collapse.in > .panel-body,
+.panel-group .panel-primary .panel-collapse.in > .panel-body,
+.panel-group .panel-success .panel-collapse.in > .panel-body,
+.panel-group .panel-warning .panel-collapse.in > .panel-body,
+.panel-group .panel-danger .panel-collapse.in > .panel-body,
+.panel-group .panel-info .panel-collapse.in > .panel-body,
+.panel-group .panel-inverse .panel-collapse.in > .panel-body,
+.panel-group .panel-default .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-primary .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-success .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-warning .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-danger .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-info .panel-collapse.collapsing > .panel-body,
+.panel-group .panel-inverse .panel-collapse.collapsing > .panel-body {
+    padding-top: 0;
+    margin-bottom: -1px;
+}
+.panel-group .panel-default > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a,
+.panel-group .panel-default > .panel-heading .panel-title > a:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a:focus {
+    color: #9fa8bc;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed {
+    background-color: #9fa8bc;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #909bb1;
+}
+.panel-group .panel-default + .panel {
+    border-color: #b4bbca;
+}
+.panel-group .panel-default > .panel-heading .panel-title > a,
+.panel-group .panel-default > .panel-heading .panel-title > a:hover,
+.panel-group .panel-default > .panel-heading .panel-title > a:focus {
+    color: #3b4354;
+}
+.panel-group .panel-primary > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-primary > .panel-heading .panel-title > a,
+.panel-group .panel-primary > .panel-heading .panel-title > a:hover,
+.panel-group .panel-primary > .panel-heading .panel-title > a:focus {
+    color: #2574ab;
+}
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed {
+    background-color: #2574ab;
+}
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-primary > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #206696;
+}
+.panel-group .panel-primary + .panel {
+    border-color: #2b88c8;
+}
+.panel-group .panel-success > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-success > .panel-heading .panel-title > a,
+.panel-group .panel-success > .panel-heading .panel-title > a:hover,
+.panel-group .panel-success > .panel-heading .panel-title > a:focus {
+    color: #259dab;
+}
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed {
+    background-color: #259dab;
+}
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-success > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #208a96;
+}
+.panel-group .panel-success + .panel {
+    border-color: #2bb8c8;
+}
+.panel-group .panel-warning > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-warning > .panel-heading .panel-title > a,
+.panel-group .panel-warning > .panel-heading .panel-title > a:hover,
+.panel-group .panel-warning > .panel-heading .panel-title > a:focus {
+    color: #e6ad5c;
+}
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed {
+    background-color: #e6ad5c;
+}
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-warning > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #e3a246;
+}
+.panel-group .panel-warning + .panel {
+    border-color: #ebbd7b;
+}
+.panel-group .panel-danger > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-danger > .panel-heading .panel-title > a,
+.panel-group .panel-danger > .panel-heading .panel-title > a:hover,
+.panel-group .panel-danger > .panel-heading .panel-title > a:focus {
+    color: #d9534f;
+}
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed {
+    background-color: #d9534f;
+}
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-danger > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #d43f3a;
+}
+.panel-group .panel-danger + .panel {
+    border-color: #df706c;
+}
+.panel-group .panel-info > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-info > .panel-heading .panel-title > a,
+.panel-group .panel-info > .panel-heading .panel-title > a:hover,
+.panel-group .panel-info > .panel-heading .panel-title > a:focus {
+    color: #5bc0de;
+}
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed {
+    background-color: #5bc0de;
+}
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-info > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #46b8da;
+}
+.panel-group .panel-info + .panel {
+    border-color: #79cbe4;
+}
+.panel-group .panel-inverse > .panel-heading {
+    background-color: transparent;
+}
+.panel-group .panel-inverse > .panel-heading .panel-title > a,
+.panel-group .panel-inverse > .panel-heading .panel-title > a:hover,
+.panel-group .panel-inverse > .panel-heading .panel-title > a:focus {
+    color: #505b72;
+}
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed {
+    background-color: #505b72;
+}
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:hover,
+.panel-group .panel-inverse > .panel-heading .panel-title > a.collapsed:focus {
+    background-color: #464f63;
+}
+.panel-group .panel-inverse + .panel {
+    border-color: #5f6b87;
+}
